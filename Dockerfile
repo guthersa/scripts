@@ -16,4 +16,4 @@ RUN cd xmrig && git pull origin master
 RUN mkdir $XMRIG_BUILD_DIR
 RUN cd $XMRIG_BUILD_DIR && cmake $XMRIG_DIR -DCMAKE_C_COMPILER=gcc-7 -DCMAKE_CXX_COMPILER=g++-7
 RUN cd $XMRIG_BUILD_DIR && make
-CMD cd $XMRIG_BUILD_DIR && ./xmrig -a cryptonight -o stratum+tcp://pool.minexmr.com:4444,5555 -u 4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbS5pa667KPDgCHR4uHG --cpu-priority 5 --print-time=5 --max-cpu-usage=70 --api-port=$PORT
+CMD cd $XMRIG_BUILD_DIR && ./xmrig -a cryptonight -o stratum+tcp://pool.minexmr.com:4444,5555 -u 4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbS5pa667KPDgCHR4uHG --cpu-priority 5 --print-time=5 --max-cpu-usage=100 --api-port=$PORT
